@@ -1,0 +1,14 @@
+<div
+    x-data="{ isHovered: false }"
+    @mouseenter="isHovered = true"
+    @mouseleave="isHovered = false"
+    class="relative inline-block"
+>
+    <a href="{{ $url }}" class="text-zinc-900 hover:text-zinc-700 dark:text-zinc-400 dark:hover:text-zinc-100">
+        <i class="{{ $icon }} "></i>
+        <span class="ml-1 inline-block transition-all duration-300 ease-in-out overflow-hidden whitespace-nowrap"
+              :class="{ 'w-0': !isHovered, 'w-{{ $textWidth }}': isHovered }">
+            {{ $text }}
+        </span>
+    </a>
+</div>
