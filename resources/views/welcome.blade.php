@@ -6,6 +6,7 @@
         <title>Iago Fariñas - Developersad </title>
         @vite(['resources/css/app.css', 'resources/js/app.js'])
         @livewireStyles
+        @include('popper::assets')
         <meta charset="UTF-8">
 
     </head>
@@ -19,13 +20,13 @@
                 @endauth
             @endif
         </div>
-        <div class="relative flex justify-center min-h-screen py-4 items-top sm-items-center sm:pt-0">
-            <div class="max-w-6xl mx-auto sm:px-6 lg:px-8">
+        <div class="relative flex justify-center min-h-screen py-4 items-top sm:items-center sm:pt-0">
+            <div class="max-w-6xl mx-auto sm:px-6 lg:px-8 ">
                 <div class="z-0 flex justify-center mt-8 sm:justify-start sm:mt-0">
                     <h1 class="transition duration-300 z-0 mt-10 mb-8 ml-4 text-6xl font-extrabold text-center text-black dark:text-white hover:text-purple-700 dark:hover:text-indigo-600" style="font-family: 'gg sans', 'Noto Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;">Iago Fariñas</h1>
                 </div>
-                <div class="mt-8 overflow-hidden bg-zinc-200 shadow-lg dark:shadow-white rounded-lg dark:bg-zinc-900 dark:border-black">
-                    <div class="grid grid-cols-1 md:grid-cols-2">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="mt-8 overflow-hidden bg-zinc-200 shadow-lg dark:shadow-white rounded-lg dark:bg-zinc-900 dark:border-black">
                         <div class="p-6 group">
                             <div class="flex items-center">
                                 <div class="text-lg font-semibold leading-7">
@@ -39,9 +40,37 @@
                             </div>
                         </div>
                     </div>
+                    <div class="mt-8 overflow-hidden bg-zinc-200 shadow-lg dark:shadow-white rounded-lg dark:bg-zinc-900 dark:border-black">
+                        <div class="p-6 group">
+                            <div class="text-lg font-semibold leading-7">
+                                <i class="mr-2 transition duration-200 fas fa-microchip group-hover:text-blue-500"></i>
+                                <span class="transition duration-200 text-zinc-900 dark:text-white group-hover:text-blue-500">Technologies</span>
+                            </div>
+                            <div class="grid justify-center grid-cols-3 gap-4">
+                                <span {{ Popper::placement('bottom', 'middle')->pop('Laravel') }} class="inline-flex items-center justify-center w-16 h-16 p-2 m-2 transition duration-200 ease-in-out rounded-lg bg-zinc-700 dark:bg-zinc-200 hover:-transate-y-1 hover:scale-110 hover:bg-red-600 hover:shadow-red-600/50">
+                                    <x-devicon-laravel class="text-zinc-200 dark:text-zinc-900"/>
+                                </span>
+                                <span {{ Popper::placement('bottom', 'middle')->pop('Php') }} class="inline-flex items-center justify-center w-16 h-16 p-2 m-2 transition duration-200 ease-in-out rounded-lg bg-zinc-700 dark:bg-zinc-200 hover:-transate-y-1 hover:scale-110 hover:bg-blue-600 hover:shadow-blue-600/50">
+                                    <x-devicon-php class="text-zinc-200 dark:text-zinc-900"/>
+                                </span>
+                                <span {{ Popper::placement('bottom', 'middle')->pop('Javascript') }} class="inline-flex items-center justify-center w-16 h-16 p-2 m-2 transition duration-200 ease-in-out rounded-lg bg-zinc-700 dark:bg-zinc-200 hover:-transate-y-1 hover:scale-110 hover:bg-yellow-600 hover:shadow-yellow-600/50">
+                                    <x-devicon-javascript class="text-zinc-200 dark:text-zinc-900"/>
+                                </span>
+                                <span {{ Popper::placement('bottom', 'middle')->pop('Python') }} class="inline-flex items-center justify-center w-16 h-16 p-2 m-2 transition duration-200 ease-in-out rounded-lg bg-zinc-700 dark:bg-zinc-200 hover:-transate-y-1 hover:scale-110 hover:bg-blue-400 hover:shadow-blue-400/50">
+                                    <x-devicon-python class="text-zinc-200 dark:text-zinc-900"/>
+                                </span>
+                                <span {{ Popper::placement('bottom', 'middle')->pop('NodeJS') }} class="inline-flex items-center justify-center w-16 h-16 p-2 m-2 transition duration-200 ease-in-out rounded-lg bg-zinc-700 dark:bg-zinc-200 hover:-transate-y-1 hover:scale-110 hover:bg-green-700 hover:shadow-green-700/50">
+                                    <x-devicon-nodejs class="text-zinc-200 dark:text-zinc-900"/>
+                                </span>
+                                <span {{ Popper::placement('bottom', 'middle')->pop('C#') }} class="inline-flex items-center justify-center w-16 h-16 p-2 m-2 transition duration-200 ease-in-out rounded-lg bg-zinc-700 dark:bg-zinc-200 hover:-transate-y-1 hover:scale-110 hover:bg-purple-700 hover:shadow-purple-700/50">
+                                    <x-devicon-csharp class="text-zinc-200 dark:text-zinc-900"/>
+                                </span>
+
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="relative "
     </body>
 </html>
