@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Iago Fariñas - Developersad </title>
+        <title>Iago Fariñas - Developer</title>
         @vite(['resources/css/app.css', 'resources/js/app.js'])
         @livewireStyles
         @include('popper::assets')
@@ -11,22 +11,30 @@
 
     </head>
     <body class="antialiased transition duration-200 text-zinc-900 dark:text-zinc-100 dark:bg-zinc-900">
-        <div class="z-10 p-6 text-right sm:fixed sm:top-0 sm:right-0">
-            @if(Route::has('login'))
-                @auth
-                    <a href="{{ url('/dashboard') }}" class="text-zinc-900 hover:text-zinc-700 dark:text-zinc-400 dark:hover:text-zinc-100"><i class="fas fa-home"></i> Dashboard</a>
-                @else
-                    <a href="{{ url('/dashboard') }}" class="text-zinc-900 hover:text-zinc-700 dark:text-zinc-400 dark:hover:text-zinc-100"><i class="fa-solid fa-arrow-right-to-bracket"></i> Log in</a>
-                @endauth
-            @endif
+        <div class="navbar bg-base-100">
+            <div class="flex-1">
+                <a href="{{ url('/') }}" class="btn btn-ghost text-xl">Home</a>
+            </div>
+            <div class="navbar-center">
+
+            </div>
+            <div class="flex-none">
+                @if(Route::has('login'))
+                    @auth
+                        <a href="{{ url('/dashboard') }}" class="btn btn-ghost text-zinc-900 hover:text-zinc-700 dark:text-zinc-400 dark:hover:text-zinc-100"><i class="fas fa-home"></i> Dashboard</a>
+                    @else
+                        <a href="{{ url('/dashboard') }}" class="btn btn-ghost text-zinc-900 hover:text-zinc-700 dark:text-zinc-400 dark:hover:text-zinc-100"><i class="fa-solid fa-arrow-right-to-bracket"></i> Log in</a>
+                    @endauth
+                @endif
+            </div>
         </div>
-        <div class="relative flex justify-center min-h-screen py-4 items-top sm:items-center sm:pt-0">
+        <div class="relative flex justify-center items-top min-h-screen py-4 sm:pt-0">
             <div class="max-w-6xl mx-auto sm:px-6 lg:px-8 ">
                 <div class="z-0 flex justify-center mt-8 sm:justify-start sm:mt-0">
                     <h1 class="transition duration-300 z-0 mt-10 mb-8 ml-4 text-6xl font-extrabold text-center text-black dark:text-white hover:text-purple-700 dark:hover:text-indigo-600" style="font-family: 'gg sans', 'Noto Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;">Iago Fariñas</h1>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <div class="mt-8 overflow-hidden bg-zinc-200 shadow-lg dark:shadow-white rounded-lg dark:bg-zinc-900 dark:border-black">
+                    <div class="mt-8 overflow-hidden bg-zinc-200 shadow-xl dark:shadow-white/15 rounded-lg dark:bg-zinc-950/30 dark:border-black">
                         <div class="p-6 group">
                             <div class="flex items-center">
                                 <div class="text-lg font-semibold leading-7">
@@ -40,7 +48,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="mt-8 overflow-hidden bg-zinc-200 shadow-lg dark:shadow-white rounded-lg dark:bg-zinc-900 dark:border-black">
+                    <div class="mt-8 overflow-hidden bg-zinc-200 shadow-xl dark:shadow-white/15 rounded-lg dark:bg-zinc-950/30 dark:border-black">
                         <div class="p-6 group">
                             <div class="text-lg font-semibold leading-7">
                                 <i class="mr-2 transition duration-200 fas fa-microchip group-hover:text-blue-500"></i>
