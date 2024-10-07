@@ -16,10 +16,12 @@
                 <a href="{{ url('/') }}" class="btn btn-ghost text-xl">Home</a>
                 <a href="{{ url('/about-me') }}" class="btn btn-ghost text-xl">About me</a>
             </div>
-            <div class="navbar-center">
-                <a href="{{ url('/') }}" class="transition duration-200 btn btn-ghost font-semibold text-2xl hover:text-purple-700 dark:hover:text-purple-400">Iago Fariñas</a>
-                <img src="{{ asset('X341LogoBlack.svg') }}" alt="Logo" class="fill-zinc-900 dark:fill-zinc-200 text-lg" viewBox="0 0 24 24">
+            <a href="{{ url('/') }}">
+            <div class="navbar-center btn btn-ghost group">
+                <x-svg.xicons.logo-black class="transition duration-200 w-12 h-12 group-hover:text-purple-700 dark:group-hover:text-purple-400"/>
+                <a class="transition duration-200 font-semibold text-2xl group-hover:text-purple-700 dark:group-hover:text-purple-400">Iago Fariñas</a>
             </div>
+            </a>
             <div class="navbar-end">
                 @if(Route::has('login'))
                     @auth
