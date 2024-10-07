@@ -18,6 +18,7 @@
             </div>
             <div class="navbar-center">
                 <a href="{{ url('/') }}" class="transition duration-200 btn btn-ghost font-semibold text-2xl hover:text-purple-700 dark:hover:text-purple-400">Iago Fariñas</a>
+                <img src="{{ asset('X341LogoBlack.svg') }}" alt="Logo" class="fill-zinc-900 dark:fill-zinc-200 text-lg" viewBox="0 0 24 24">
             </div>
             <div class="navbar-end">
                 @if(Route::has('login'))
