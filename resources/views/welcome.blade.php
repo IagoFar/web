@@ -11,7 +11,7 @@
 
     </head>
     <body class="antialiased transition duration-200 text-zinc-900 dark:text-zinc-100 dark:bg-zinc-900">
-        <div class="navbar bg-zinc-900">
+        <div class="navbar bg-zinc-200 rounded-b-lg dark:bg-zinc-900">
             <div class="flex-1">
                 <a href="{{ url('/') }}" class="btn btn-ghost text-xl">Home</a>
             </div>
