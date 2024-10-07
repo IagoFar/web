@@ -11,7 +11,7 @@
 
     </head>
     <body class="antialiased transition duration-200 text-zinc-900 dark:text-zinc-100 dark:bg-zinc-900">
-        <div class="navbar bg-base-100">
+        <div class="navbar bg-zinc-900">
             <div class="flex-1">
                 <a href="{{ url('/') }}" class="btn btn-ghost text-xl">Home</a>
             </div>
@@ -80,6 +80,14 @@
                                     <i class="fas fa-code text-xl text-zinc-200 dark:text-zinc-900 hover:text-indigo-400 "></i>
                                 </span>
                             </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-8 overflow-hidden bg-zinc-200 shadow-2xl dark:shadow-xl dark:shadow-white/15 rounded-lg dark:bg-zinc-950/30 dark:border-black">
+                    <div class="p-6 group">
+                        <div class="text-lg font-semibold leading-7">
+                            <i class="transition duration-200 fas fa-check-to-slot text-zinc-900 dark:text-white group-hover:text-green-700"></i>
+                            <span class="transition duration-200 text-zinc-900 dark:text-white group-hover:text-green-700"> Projects</span>
                         </div>
                     </div>
                 </div>
