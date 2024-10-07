@@ -11,14 +11,15 @@
 
     </head>
     <body class="antialiased transition duration-200 text-zinc-900 dark:text-zinc-100 dark:bg-zinc-900">
-        <div class="navbar bg-zinc-200 rounded-b-lg dark:bg-zinc-900">
-            <div class="flex-1">
+        <div class="navbar flex text-center justify-center bg-zinc-200 rounded-b-lg dark:bg-zinc-900">
+            <div class="navbar-start">
                 <a href="{{ url('/') }}" class="btn btn-ghost text-xl">Home</a>
+                <a href="{{ url('/about-me') }}" class="btn btn-ghost text-xl">About me</a>
             </div>
             <div class="navbar-center">
-
+                <a href="{{ url('/') }}" class="transition duration-200 btn btn-ghost font-semibold text-2xl hover:text-purple-700 dark:hover:text-purple-400">Iago Fariñas</a>
             </div>
-            <div class="flex-none">
+            <div class="navbar-end">
                 @if(Route::has('login'))
                     @auth
                         <a href="{{ url('/dashboard') }}" class="btn btn-ghost text-zinc-900 hover:text-zinc-700 dark:text-zinc-400 dark:hover:text-zinc-100"><i class="fas fa-home"></i> Dashboard</a>
